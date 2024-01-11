@@ -1,2 +1,104 @@
-theme:
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 5px;
+			font-size: 1.5em;
+			text-align: left;
+			float: left
+			margin: 0px auto;
+			width: fit-content;
+
+		}
+
+		.navMenu a {
+			color: #FFFFFF;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding-right: 8px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border-bottom: 1px solid #373737;
+		
+		}
+
+		.navMenu a:hover {
+			color: #b6d0e2;
+		
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu border">
+		<a id="academic" onclick="navigate(this.id)" href="#"> <i class="ri-brain-fill"></i></a>
+		<a id="tasks" onclick="navigate(this.id)" href="#"> <i class="ri-calendar-todo-fill"></i></a>		
+		<a id="notes" onclick="navigate(this.id)" href="#"> <i class="ri-sticky-note-fill"></i></a>
+		<a id="databases" onclick="navigate(this.id)" href="#"> <i class="ri-save-3-fill"></i></a>
+		<a id="resources" onclick="navigate(this.id)" href="#"> <i class="ri-information-2-fill"></i></a>
+		<a id="archive" onclick="navigate(this.id)" href="#"> <i class="ri-delete-bin-5-line"></i></a>
+		<a id="portfolio" onclick="navigate(this.id)" href="#"> <i class="ri-global-fill"></i></a>
+    <a id="home" onclick= "navigate(this.id)"
+    theme:
   logo: hand-dislike.png
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Home-830b0281dc0c4f51bbfb9cf2ac5dd317?pvs=4", '_parent').focus();
+			else if (id == 'academic')
+				window.open("https://www.notion.so/S-s-2098e4540761444a87e60eee53ca24eb?pvs=4", '_parent').focus();
+			else if (id == 'tasks')
+				window.open("https://www.notion.so/fee8f15930f347ce9ca6fd732e546554?pvs=4", '_parent').focus();
+			else if (id == 'notes')
+				window.open("https://www.notion.so/a2e9c4d6bfdf465288671bbcd5f51046?pvs=4", '_parent').focus();
+			else if (id == 'databases')
+				window.open("https://www.notion.so/8a4f4e4c8b8140868a20273100dc7060?v=1b53673788d14ce6bd9d942a43226111&pvs=4", '_parent').focus();
+			else if (id == 'resources')
+				window.open("https://www.notion.so/resources-f75a6f901ae443e19b3ce67d1828783b?pvs=4", '_parent').focus();
+			else if (id == 'archive')
+				window.open("https://www.notion.so/09241553441d49c08476f85b9c282d15?pvs=4", '_parent').focus();
+			else if (id == 'portfolio')
+				window.open("https://www.notion.so/Portfolio-a0948043e3694e5c9f2fbb394eec206e?pvs=4", '_parent').focus();
+		
+			
+
+		}
+	</script>
+
+
+</body>
+
+</html>
